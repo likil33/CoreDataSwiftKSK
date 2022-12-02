@@ -15,6 +15,13 @@ class ViewController: UIViewController {
         createDatePicker()
     }
     
+    
+    @IBAction func DatePickerWithButtonAction(_ sender: UIButton) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DatePicketUsingBtnVC") as! DatePicketUsingBtnVC
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func createDatePicker() {
         
         // toolbar
